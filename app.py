@@ -41,32 +41,6 @@ def pdf_to_images(pdf_path):
     images = convert_from_path(pdf_path, 300)  # 200 DPI, adjust as needed
     return images
 
-# def df_to_list(str_indx, df_tables):
-#         str_arr = []
-#         dates_arr = []
-#         time_arr = []
-#         gender_arr = []
-
-#         for j in range(len(str_indx)-1):
-#             str = ''
-#             for i in range(str_indx[j], str_indx[j+1]):
-#                 if i == str_indx[len(str_indx)-2]:
-#                     str += df_tables['Answer'][i] + df_tables['Answer'][i+1] + df_tables['Answer'][i+2]
-#                     break
-#                 str += df_tables['Answer'][i] + ' '
-                
-#             date = df_tables['Date'][str_indx[j]]
-#             if date == '01/01/2023':
-#                 continue
-#             str_arr.append(str)
-#             time = df_tables['Time'][str_indx[j]]
-#             gender = df_tables['Male / Female'][str_indx[j]]
-#             dates_arr.append(date)
-#             time_arr.append(time)
-#             gender_arr.append(gender)
-        
-#         return str_arr, dates_arr, time_arr, gender_arr
-
 def main():
     # Set the title of the app
     st.title("PDF Analyzer")
